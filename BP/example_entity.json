@@ -1,0 +1,95 @@
+{
+    "type": {
+        "file_type": "entity",
+        "indent": 4,
+        "ignore": []
+    },
+    "server": {
+        "format_version": "1.20.10",
+        "minecraft:entity": {
+            "description": {
+                "identifier": "example:entity",
+                "is_experimental": false,
+                "is_spawnable": false,
+                "is_summonable": true
+            },
+            "components": {},
+            "component_groups": {},
+            "events": {}
+        }
+    },
+    "client": {
+        "format_version": "1.8.0",
+        "minecraft:client_entity": {
+            "description": {
+                "identifier": "example:entity",
+                "geometry": {"default": "example_model"},
+                "textures": {"default": "foo/bar.png"},
+                "render_controllers": ["controller.render.example"],
+                "animations": {
+                    "example_animation_controller": "controller.animation.example",
+                    "example_animation": "animation.example"
+                }
+            }
+        }
+    },
+    "render_controller": {
+        "format_version": "1.8.0",
+        "render_controllers": {
+            "controller.render.example": {
+                "geometry": "Geometry.default",
+                "materials": [
+                    {
+                        "*": "Material.default"
+                    }
+                ],
+                "textures": [
+                    "Texture.default"
+                ]
+            }
+        }
+    },
+    "animation": {
+        "format_version": "1.8.0",
+        "animations": {
+            "animation.example": {
+                "animation_length": 0,
+                "loop": false
+            }
+        }
+    },
+    "animation_controller": {
+        "format_version": "1.19.0",
+        "animation_controllers": {
+            "controller.animation.example": {
+                "initial_state": "default",
+                "states": {
+                    "default": {
+                        "animations": ["example_animation"]
+                    }
+                }
+            }
+        }
+    },
+    "texts": [
+        {
+            "language": "en_US",
+            "translation": "example.text=Example Text"
+        }
+    ],
+    "geometry": {
+        "format_version": "1.12.0",
+        "minecraft:geometry": [
+            {
+                "description": {
+                    "identifier": "geometry.example",
+                    "texture_width": 0,
+                    "texture_height": 0,
+                    "visible_bounds_width": 0,
+                    "visible_bounds_height": 0,
+                    "visible_bounds_offset": [0, 0, 0]
+                }
+            }
+        ]
+    }
+}
