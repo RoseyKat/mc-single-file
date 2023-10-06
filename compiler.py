@@ -52,6 +52,8 @@ def compile_entity(file):
     indent = data["type"]["indent"]
     name = str(os.path.basename(file))
 
+    # TODO: Do this in a for loop, this is really messy
+
     # Compile server
     if "server" in ignore_list:
         print("Ignored: server")
